@@ -1,0 +1,71 @@
+
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel{
+    display: grid;
+    grid-template-columns: 50px auto 50px;
+    width: 400px;
+}
+
+.carousel__image {
+    grid-column: 1/4;
+}
+
+.carousel__backButton{
+    grid-column: 1/2;
+    z-index: 4;
+}
+
+.carousel__forwardButton{
+    grid-column: 3/4;
+}
+
+.carousel__forwardButton, .carousel__backButton, .carousel__image{
+    grid-row: 1/2;
+}
+
+.carousel__forwardButton, .carousel__backButton{
+    border: none;
+    background: transparent;
+    font-size: 50px;
+    color: #fff;
+    transition: background 1500ms ease-in-out;
+}
+.carousel__backButton:hover {
+    background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7))
+}
+
+.carousel__forwardButton:hover {
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7))
+}
+
+
+.pagination__button {
+    height: 20px;
+    width: 20px;
+    border: none;
+    border-radius: 50%;
+    background-color: gray;
+    margin-right: 15px;
+    margin-left: 15px;
+    margin-top: 2px;
+    align-items: center;
+}
+
+.pagination__button:hover{
+    background-color: #e3dede;
+    
+}
+
+.pagination__button:focus{
+    background-color: #fff;
+    border: 2px solid gray;  
+}
+
+
+
